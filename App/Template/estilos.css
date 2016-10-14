@@ -1,0 +1,208 @@
+body {
+	background-color: #FAFAD2;
+}
+p {
+	font-family: Consolas, Century Gothic, sans-serif;
+}
+
+#banner {
+	display: inline-block;
+	border: 0px;
+	position: relative;
+	background-color: #02061d;
+	width: 80vw;
+}
+img {
+	font-family: sans-serif;
+}
+
+.banner {	
+	height: 50vh;
+	position: relative;
+}
+
+#guia {
+	position: relative;
+	display: inline-block;
+}
+
+#guia ul {
+	border-radius: 20px;
+	display: inline-block;
+    background-color: #02061d;
+    list-style: none;
+    width: 50vw;
+	height: 10vh;
+}
+#guia li {
+	display: inline-block;
+	background-color: #02061d;
+	position: relative;
+}
+
+.guia-list {
+	width: 15vw;
+	height: 10vh;
+}
+
+.guia-middle {	
+    width: 15vw;
+    height: 8vh;
+    border-left: 1px solid rgb(128, 0, 128);
+    border-left-width: 2px;
+    border-right: 1px solid rgb(128, 0, 128);
+    border-right-width: 2px;
+}
+
+.link-guia {
+	text-align: center;
+    margin-top: 22px;
+    margin-bottom: 22px;
+    margin-left: 22px;
+    margin-right: 22px;
+    color: yellow;
+}
+.link-guia-middle {
+	text-align: center;
+    position: relative;
+	margin-left: 22px;
+    margin-right: 22px;
+    color: yellow;
+}
+
+.busca-post {
+	width: 18vw;
+	height: 12vh;
+	background-color: #02061d;
+	border-radius: 20px;
+}
+
+.table-busca-post {
+	border-spacing: 0px;
+	position: relative;
+	top: 1vh;
+    left: 1vw;
+}
+.label-busca-post {
+	color: yellow;
+	margin: 0px;
+}
+.nome-busca {
+	width: 12vw;
+    height: 3vh;
+    border-style: hidden;
+    border-radius: 5px;
+    margin-top: 2vh;
+	font-family: Consolas;
+}
+.nome-busca:focus {
+	box-shadow: 0px 0px 6px 5px rgba(161, 49, 183, 0.72);
+    outline-color: rgba(204, 20, 241, 0.96);
+	outline-width: thick;
+	
+}
+.btn-busca-post {
+	position: relative;
+    top: 1vh;
+    margin-left: 1vw;
+    width: 2.5vw;
+    height: 2vw;
+	background-color: yellow;
+    border-style: outset;
+	border-radius: 8px;
+	border-color: yellow;
+	outline: none;
+	font-family: Consolas;
+	font-weight: bold
+}
+.btn-busca-post:active {
+	border-style: inset;
+	font-size: 12px;
+}
+
+#conteudo {
+	width: 71vw;
+    height: 167vh;
+    background-color: white;
+    border: 1px solid black;
+    margin-left: 6vw;
+    margin-top: 6vh;
+    padding: 2vh;
+    display: inline-block;
+}
+
+.img-capa {
+	width: 12vw;
+	height: 31vh;
+	display: table-cell;
+}
+
+.titulo {
+	width: 49.3vw;
+    height: 15vh;
+    display: inline-block;
+    background-color: green;
+    position: relative;
+    bottom: 30.6vh;
+    left: 10.7vw;
+}
+.descricao {
+	width: 49.3vw;
+    height: 15vh;
+    display: inline-block;
+    background-color: red;
+    position: relative;
+    bottom: 31.3vh;
+    left: 10.7vw;
+}
+
+/*.table-post {
+	border-spacing: 0px;
+	border-collapse: collapse;
+    width: 60vw;
+    height: 30vh;
+    border: 1px solid black;
+    background-color: blue;
+    margin-bottom: 26px;
+}
+.td-capa {
+    width: 10vw;
+    padding: 0px;
+    background-color: black;
+    height: 30vh;
+    border-right: 10px solid red;
+}
+.td-titulo {
+	width: 49.3vw;
+    height: 15vh;
+    background-color: black;
+}
+.titulo-text {
+	font-size: 20px;
+	text-align: left;
+	color: white;
+	font-family: Century Gothic;
+}
+.td-desc {
+	width: 49.3vw;
+    height: 14vh;
+    background-color: white;
+}*/
+
+.prev-img {
+	position: relative;
+	background-color: pink;
+}
+
+.prev-desc {
+	position: absolute;
+	background-color: rgba(0,0,0,.7);
+}
+.desc {
+	color: white;
+	font-family: Consolas;
+	font-size: xx-large;
+}
+.teste {
+	background-size: cover;
+}
