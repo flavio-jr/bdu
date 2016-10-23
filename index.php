@@ -1,0 +1,22 @@
+<?php
+date_default_timezone_set('America/Sao_Paulo');
+
+//Autoload das classes work
+require_once 'Lib/Work/Autoloaders/ClassLoader.php';
+$cl= new Work\Autoloaders\ClassLoader;
+$cl->addNamespace('Work','Lib/Work');
+$cl->register();
+
+//Autoload das classes App
+require_once 'Lib/Work/Autoloaders/AppLoader.php';
+$apl = new Work\Autoloaders\AppLoader;
+$apl->addDirectory('App/Control');
+$apl->addDirectory('App/Model');
+$apl->register();
+
+if($_GET) {
+	$class = $_GET['class'];
+	$page = new $class;
+	$page->show();
+}
+?>

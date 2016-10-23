@@ -1,8 +1,11 @@
 <?php
 namespace Work\Database;
 
+use Work\Loggers\Logger;
+use Work\Loggers\LoggerXML;
 class Transaction {
 	private static $conn;
+	private static $logger;
 	
 	public function __construct(){}
 	
@@ -10,7 +13,6 @@ class Transaction {
 		if(empty(self::$conn)) {
 			self::$conn = Connection::open($config);
 			self::$conn->beginTransaction();
-			echo "Open OK!<br>\n";
 		}
 		
 	}
@@ -18,17 +20,23 @@ class Transaction {
 		if(self::$conn) {
 			self::$conn->commit();
 			self::$conn = NULL;
-			echo "Close Ok!<br>\n";
 		}
 	}
 	public static function get() {
 		return self::$conn;
-		echo "Ok!";
 	}
 	public static function rollBack() {
 		if(self::$conn) {
 			self::$conn->rollback();
 			self::$conn = NULL;
+		}
+	}
+	public static function setLogger(Logger $obj) {
+		self::$logger = $obj;
+	}
+	public static function log($message) {
+		if(self::$logger) {
+			self::$logger->write($message);
 		}
 	}
 }

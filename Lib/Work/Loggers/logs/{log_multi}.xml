@@ -1,0 +1,4 @@
+<comandos>
+<log time=21-59-14 date=06-10-2016>
+<message>SELECT * FROM autor WHERE (idade > 15)</message>
+</log>

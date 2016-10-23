@@ -1,0 +1,4 @@
+<comandos>
+<log time=12-50-55 date=05-10-2016>
+<message>DELETE FROM autor WHERE id=3</message>
+</log>
