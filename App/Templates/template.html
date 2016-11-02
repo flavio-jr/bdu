@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Borda do Universo</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+<body onload="trocaImagem()">
+<header>
+  <h1> <!-- Banner com o nome do site -->
+    <div id="banner">
+      <img src="../Images/banner.png">
+    </div>
+  </h1>
+
+  <nav>
+    <script src="js/bannerrotativo.js"></script>
+    <div id="base-rotativo">  <!-- Banner rotativo a ser terminado com JavaScript -->
+      <ul>
+        <li>
+          <figure style="display:none" id="1">
+            <a href="#"><img src="../Images/posts/cosmos.jpg"></a>
+            <figcaption class="nome-post"><a href="#">O Cosmos de uma maneira jamais vista</a></figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure style="display:none" id="2">
+            <a href="#"><img src="../Images/posts/sw7.jpg"></a>
+            <figcaption class="nome-post"><a href="#">Novidades do Star Wars 8</a></figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure style="display:none" id="3">
+            <a href="#"><img src="../Images/posts/cdz1.jpg"></a>
+            <figcaption class="nome-post">
+              <a href="#">Cavaleiros do zodíaco volta a ser exibido na Rede Brasil</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure style="display:none" id="4">
+            <a href="#"><img src="../Images/posts/jw.jpg"></a>
+            <figcaption class="nome-post">
+              <a href="#">Reboot de filmes do século passado: nostalgia ou lucro sobre os nostálgicos?</a>
+            </figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure style="display:none" id="5">
+            <a href="#"><img src="../Images/posts/fma.jpg" style="position:relative;bottom:70px"></a>
+            <figcaption class="nome-post"><a href="#">O melhor anime da década</a></figcaption>
+          </figure>
+        </li>
+      </ul>
+    </div>
+    <div id="selection-bar">
+      <ul>
+        <li>
+          <div class="selection" id="b1" onclick="bot(0)"></div>
+        </li>
+        <li>
+          <div class="selection" id="b2" onclick="bot(1)"></div>
+        </li>
+        <li>
+          <div class="selection" id="b3" onclick="bot(2)"></div>
+        </li>
+        <li>
+          <div class="selection" id="b4" onclick="bot(3)"></div>
+        </li>
+        <li>
+          <div class="selection" id="b5" onclick="bot(4)"></div>
+        </li>
+    </div>
+    <div id="menu-hor">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Análises</a></li>
+        <li><a href="#">Notícias</a></li>
+        <li><a href="#">Contos</a></li>
+        <li><a href="#">Entretenimento</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section id="main">
+  <div id="content">
+  </div>
+
+</section>
+
+</body>
+</html>
