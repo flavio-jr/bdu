@@ -17,7 +17,6 @@ $apl->register();
 $template = file_get_contents("App/Templates/template.html");
 if(!$_GET) {
 	$pag = Home::homePage();
-	file_put_contents("index.txt",$pag);
 	echo str_replace("{{content}}",$pag,$template);
 }
 else if($_GET) {
