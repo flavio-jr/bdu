@@ -7,5 +7,7 @@ $conn = Work\Database\Transaction::get();
 if($conn) {
 	echo "get OK!<br>\n";
 }
-
+else {
+	echo "not ok!";
+}
 ?>

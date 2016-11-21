@@ -2,37 +2,47 @@
 <html lang="pt-br">
 <head>
   <title>Borda do Universo</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="css/reset.css">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <!-- estilos da página -->
+  <link rel="stylesheet" href="App/Templates/css/estilos.css">
+  <!-- css que reseta propriedades nativas do html -->
+  <link rel="stylesheet" href="App/Templates/css/reset.css">
+  <link rel="shortcut icon" type="image/x-icon" href="App/Images/bdu.ico">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="App/Templates/css/mobile.css" media="(max-width: 1100px)">
 </head>
 <body onload="trocaImagem()">
+<div id="page">
 <header>
   <h1> <!-- Banner com o nome do site -->
     <div id="banner">
-      <img src="../Images/banner.png">
+      <img src="App/Images/banner.png">
+      <form method="GET" enctype="multipart/form-data">
+        <input type="search" placeholder="o que você procura?">
+        <input type="button">
+      </form>
     </div>
   </h1>
 
   <nav>
-    <script src="js/bannerrotativo.js"></script>
-    <div id="base-rotativo">  <!-- Banner rotativo a ser terminado com JavaScript -->
+    <script src="App/Templates/js/bannerrotativo.js"></script>
+    <div id="base-rotativo">
       <ul>
         <li>
           <figure style="display:none" id="1">
-            <a href="#"><img src="../Images/posts/cosmos.jpg"></a>
+            <a href="#"><img src="App/Images/posts/cosmos.jpg"></a>
             <figcaption class="nome-post"><a href="#">O Cosmos de uma maneira jamais vista</a></figcaption>
           </figure>
         </li>
         <li>
           <figure style="display:none" id="2">
-            <a href="#"><img src="../Images/posts/sw7.jpg"></a>
+            <a href="#"><img src="App/Images/posts/sw7.jpg"></a>
             <figcaption class="nome-post"><a href="#">Novidades do Star Wars 8</a></figcaption>
           </figure>
         </li>
         <li>
           <figure style="display:none" id="3">
-            <a href="#"><img src="../Images/posts/cdz1.jpg"></a>
+            <a href="#"><img src="App/Images/posts/cdz1.jpg"></a>
             <figcaption class="nome-post">
               <a href="#">Cavaleiros do zodíaco volta a ser exibido na Rede Brasil</a>
             </figcaption>
@@ -40,7 +50,7 @@
         </li>
         <li>
           <figure style="display:none" id="4">
-            <a href="#"><img src="../Images/posts/jw.jpg"></a>
+            <a href="#"><img src="App/Images/posts/jw.jpg"></a>
             <figcaption class="nome-post">
               <a href="#">Reboot de filmes do século passado: nostalgia ou lucro sobre os nostálgicos?</a>
             </figcaption>
@@ -48,7 +58,7 @@
         </li>
         <li>
           <figure style="display:none" id="5">
-            <a href="#"><img src="../Images/posts/fma.jpg" style="position:relative;bottom:70px"></a>
+            <a href="#"><img src="App/Images/posts/fma.jpg" style="position:relative;bottom:70px"></a>
             <figcaption class="nome-post"><a href="#">O melhor anime da década</a></figcaption>
           </figure>
         </li>
@@ -72,7 +82,7 @@
           <div class="selection" id="b5" onclick="bot(4)"></div>
         </li>
     </div>
-    <div id="menu-hor">
+    <div id="menu-hor">  <!-- Lista horizontal com defeito no posicionamento -->
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Análises</a></li>
@@ -84,10 +94,29 @@
   </nav>
 </header>
 <section id="main">
-  <div id="content">
+  {{content}}
+<div id="paginacao">
+    <div class="pag-base"> <a href="#">1</a> </div>
+    <div class="pag-base"><a href="#">{{2}}</a></div>
+    <div class="pag-base"><a href="#">{{3}}</a></div>
+    <div class="pag-base"><a href="#">{{4}}</a></div>
+    <div class="pag-base"><a href="#">{{5}}</a></div>
+    <div class="pag-base"><a href="#">{{6}}</a></div>
+    <div class="pag-base"><a href="#">{{7}}</a></div>
+    <div class="pag-base"><a href="#">{{8}}</a></div>
+    <div class="pag-base"><a href="#">{{9}}</a></div>
+    <div class="pag-base"><a href="#">{{10}}</a></div>
+    <!-- <div class="pag-base"><a href="#">...</a></div> -->
   </div>
+  <script src="App/Templates/js/pages.js"></script>
 
 </section>
-
+<footer>
+  <div id="copyright">
+    <img src="App/Images/bdu-simbol.png">
+    <p class="cr">&#169 Borda do Universo - Todos os direitos reservados</p>
+  </div>
+</footer>
+</div>
 </body>
 </html>

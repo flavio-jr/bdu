@@ -8,11 +8,11 @@ class LoggerXML extends Logger {
 		$msg = "<log time={$time} date={$date}>\n";
 		$msg .= "<message>{$message}</message>\n";
 		$msg .= "</log>\n";
-		
+
 		$handler = fopen($this->file,'a');
 		fwrite($handler,$msg);
 		fclose($handler);
-		
+
 	}
 }
 ?>

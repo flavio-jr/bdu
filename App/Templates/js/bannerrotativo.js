@@ -13,10 +13,9 @@ function trocaImagem(i) {
       indice++;
     }
   }
-  document.getElementById("b"+imgs[indice]).style.backgroundColor = "purple";
+  document.getElementById("b"+imgs[indice]).style.backgroundColor = "#673AB7";
   document.getElementById(imgs[indice]).style.display = "inline-block";
   document.getElementById(imgs[indice]).style.opacity = "1";
-  console.log(indice);
   return setTimeout("inicio()",5000);
 
 }
@@ -45,7 +44,7 @@ function fim() {
 }
 function bot(i) {
   var a = trocaImagem(i);
-  document.getElementById("b"+imgs[i]).style.backgroundColor = "purple";
+  document.getElementById("b"+imgs[i]).style.backgroundColor = "#673AB7";
   clearTimeout(a);
 }
 function limpa(i) {

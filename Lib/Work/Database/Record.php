@@ -1,17 +1,21 @@
 <?php
 namespace Work\Database;
-/*
-Implementar:
-      find(id) :)ok FUNCIONANDO
-	 save()   :)ok FUNCIONANDO
-      delete() :)ok FUNCIONANDO
-      all()
-      getLastId()  :)ok  FUNCIONANDO
-*/
+
 use Exception;
 abstract class Record {
 	protected $data;
-	
+
+	public function __construct($id = NULL) {
+		if($id) {
+			$reg = $this->find($id); //Carrega um registro com o id correspondente
+
+			if(is_object($reg)) {
+				$this->importData($reg->exportData()); //Usa o vetor $data de $reg no objeto carregado
+			}
+
+		}
+	}
+
 	public function __set($prop,$valor) {
 		if(method_exists($this,'set_'.$prop)) {
 			call_user_func(array($this,'set_'.$prop),$valor);
@@ -58,7 +62,7 @@ abstract class Record {
 		$object = $result->fetchObject("stdClass");
 		return $object->max;
 	}
-	
+
 	public function find($id) {
 		if($conn = Transaction::get()) {
 			$sql = 'SELECT * FROM ' . $this->getModel() . ' WHERE id=' . (int)$id;
@@ -73,13 +77,13 @@ abstract class Record {
 			throw new Exception("Não há transação aberta");
 		}
 	}
-	
+
 	public static function onFind($id) {
 		$class = get_called_class();
 		$ar = new $class;
 		return $ar->find($id);
 	}
-	
+
 	public function save() {
 		$dados = $this->toSQL();
 		if($conn=Transaction::get()){
@@ -109,7 +113,7 @@ abstract class Record {
 			throw new Exception("Não há transação ativa");
 		}
 	}
-	
+
 	public function toSQL() {
 		$sql = array();
 		foreach($this->data as $col=>$valor) {
@@ -131,7 +135,7 @@ abstract class Record {
 		}
 		return $sql;
 	}
-	
+
 	public function delete($id = NULL) {
 		$id = ($id) ? $id : $this->data['id'];
 		if($conn=Transaction::get()) {
