@@ -1,40 +1,7 @@
 <comandos>
-<log time=19-30-10 date=19-11-2016>
+<log time=18-45-54 date=21-11-2016>
 <message>SELECT count(*) FROM post</message>
 </log>
-<log time=19-30-10 date=19-11-2016>
+<log time=18-45-54 date=21-11-2016>
 <message>SELECT count(*) FROM post</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM post WHERE (id <= '5')LIMIT 5 </message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM post WHERE id=5</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM tag WHERE id=1</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM post WHERE id=4</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM tag WHERE id=2</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM post WHERE id=3</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM tag WHERE id=1</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM post WHERE id=2</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM tag WHERE id=2</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM post WHERE id=1</message>
-</log>
-<log time=19-30-10 date=19-11-2016>
-<message>SELECT * FROM tag WHERE id=4</message>
 </log>

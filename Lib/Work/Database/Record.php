@@ -37,6 +37,9 @@ abstract class Record {
 			if(isset($this->data[$prop])) {
 				return $this->data[$prop];
 			}
+			else {
+				return 'null';
+			}
 		}
 	}
 	public function __isset($prop) {

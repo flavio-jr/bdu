@@ -9,20 +9,19 @@ use Work\Control\Page;
 class Home extends Page {
 
   private $pages;
-  private $pag_atual;
+  private static $pag_atual;
 
   public function __construct(){
     Transaction::open('bdu');
     Transaction::setLogger(new LoggerXML('novo_home'));
     $regs = new Multi('Post');
     $this->pages = $regs->count();
-    $this->pag_atual = 1;
-    echo $this->view();
+    self::$pag_atual = 1;
   }
 
   public function view() {
     Transaction::open('bdu');
-    $lastID = $this->pag_atual * 5;
+    $lastID = self::$pag_atual * 5;
     Transaction::log($lastID);
     $filter = new Criterion;
     $filter->add(new Filter('id','<=',$lastID));
@@ -34,9 +33,9 @@ class Home extends Page {
 
     $pag_post = file_get_contents('App/Templates/home.html');
 
-    $i = $lastID;
-    $j = $lastID-5;
-    while($i>=$lastID-5) {
+    $i = 5;
+    $j = 0;
+    while($i>=0) {
       $post = new Post($posts[$i]->id);
       $tag = $post->getTag();
       $date = self::formatDate($post->date);
@@ -53,7 +52,6 @@ class Home extends Page {
       $j++;
       $i--;
     }
-    Transaction::log($pag_post);
     echo $pag_post;
   }
 
@@ -108,8 +106,9 @@ class Home extends Page {
 
   }
 
-  public function flip($num_page) {
-    $this->pag_atual = (int)$num_page;
+  public function flip() {
+    self::$pag_atual = $_GET['num_page'];
+    Transaction::log("num".self::$pag_atual);
     echo $this->view();
   }
 

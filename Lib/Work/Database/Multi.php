@@ -19,9 +19,9 @@ class Multi {
 		$limit = $filter->getProperty('limit');
 		$offset = $filter->getProperty('offset');
 
-		$sql .= ($order) ? "ORDER BY {$order} " : '';
-		$sql .= ($limit) ? "LIMIT {$limit} " : '';
-		$sql .= ($offset) ? "OFFSET {$offset}" : '';
+		$sql .= ($order) ? " ORDER BY {$order} " : '';
+		$sql .= ($limit) ? " LIMIT {$limit} " : '';
+		$sql .= ($offset) ? " OFFSET {$offset} " : '';
 
 		if($conn = Transaction::get()) {
 			Transaction::log($sql);

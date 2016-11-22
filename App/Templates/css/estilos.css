@@ -311,14 +311,18 @@ nav #base-rotativo {
   font-size: 23px;
   float: right;
 }
-#profile {
+#menu-v {
   display: inline-block;
   width: 350px;
-  height: 380px;
-  background-color: white;
   float: right;
   margin-top: 20px;
   margin-right: 24px;
+}
+#profile {
+  display: inline-block;
+  width: inherit;
+  height: 380px;
+  background-color: white;
 }
 .label {
   display: inline-block;
@@ -345,7 +349,7 @@ nav #base-rotativo {
   width: inherit;
   margin: 0 auto;
 }
-#profile hr {
+#menu-v hr {
   display: inline-block;
   width: 113px;
   height: 2.5px;
@@ -412,6 +416,7 @@ nav #base-rotativo {
   display: block;
   margin-left: 70px;
   margin-bottom: 20px;
+  clear: both;
 }
 .pag-base {
   margin: 20px 5px;

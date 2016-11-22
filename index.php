@@ -14,13 +14,14 @@ $apl->addDirectory('App/Control');
 $apl->addDirectory('App/Model');
 $apl->register();
 
-$template = file_get_contents('App/Templates/template.html');
+$template = file_get_contents("App/Templates/template.html");
 if(!$_GET) {
-	ob_start();
 	$home = new Home;
+	ob_start();
+	$home->view();
 	$content = ob_get_contents();
 	ob_end_clean();
-	echo str_replace('{{content}}',$content,$template);
+	echo str_replace("{{content}}",$content,$template);
 }
 else if($_GET) {
 	$class = $_GET['class'];
@@ -31,9 +32,7 @@ else if($_GET) {
 		$content = ob_get_contents();
 		ob_end_clean();
 		echo str_replace("{{content}}",$content,$template);
-
 	}
 
 }
-
 ?>
