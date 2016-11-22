@@ -84,7 +84,7 @@
     </div>
     <div id="menu-hor">  <!-- Lista horizontal com defeito no posicionamento -->
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="index.php">Home</a></li>
         <li><a href="#">Análises</a></li>
         <li><a href="#">Notícias</a></li>
         <li><a href="#">Contos</a></li>
@@ -95,17 +95,18 @@
 </header>
 <section id="main">
   {{content}}
+
 <div id="paginacao">
-    <div class="pag-base"> <a href="#">1</a> </div>
-    <div class="pag-base"><a href="#">{{2}}</a></div>
-    <div class="pag-base"><a href="#">{{3}}</a></div>
-    <div class="pag-base"><a href="#">{{4}}</a></div>
-    <div class="pag-base"><a href="#">{{5}}</a></div>
-    <div class="pag-base"><a href="#">{{6}}</a></div>
-    <div class="pag-base"><a href="#">{{7}}</a></div>
-    <div class="pag-base"><a href="#">{{8}}</a></div>
-    <div class="pag-base"><a href="#">{{9}}</a></div>
-    <div class="pag-base"><a href="#">{{10}}</a></div>
+    <div class="pag-base"><a href="index.php?class=Home&method=flip&num_page=1">1</a></div>
+    <div class="pag-base"><a href="#">{{pg2}}</a></div>
+    <div class="pag-base"><a href="#">{{pg3}}</a></a></div>
+    <div class="pag-base"><a href="#">{{pg4}}</a></div>
+    <div class="pag-base"><a href="#">{{pg5}}</a></div>
+    <div class="pag-base"><a href="#">{{pg6}}</a></div>
+    <div class="pag-base"><a href="#">{{pg7}}</a></div>
+    <div class="pag-base"><a href="#">{{pg8}}</a></div>
+    <div class="pag-base"><a href="#">{{pg9}}</a></div>
+    <div class="pag-base"><a href="#">{{pg10}}</a></div>
     <!-- <div class="pag-base"><a href="#">...</a></div> -->
   </div>
   <script src="App/Templates/js/pages.js"></script>

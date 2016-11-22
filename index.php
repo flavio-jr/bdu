@@ -14,15 +14,26 @@ $apl->addDirectory('App/Control');
 $apl->addDirectory('App/Model');
 $apl->register();
 
-$template = file_get_contents("App/Templates/template.html");
+$template = file_get_contents('App/Templates/template.html');
 if(!$_GET) {
-	$pag = Home::homePage();
-	echo str_replace("{{content}}",$pag,$template);
+	ob_start();
+	$home = new Home;
+	$content = ob_get_contents();
+	ob_end_clean();
+	echo str_replace('{{content}}',$content,$template);
 }
 else if($_GET) {
 	$class = $_GET['class'];
-	$page = new $class;
-	$page->show();
+	if(class_exists($class)) {
+		$page = new $class;
+		ob_start();
+		$page->show();
+		$content = ob_get_contents();
+		ob_end_clean();
+		echo str_replace("{{content}}",$content,$template);
+
+	}
+
 }
 
 ?>

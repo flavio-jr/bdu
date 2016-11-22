@@ -8,20 +8,68 @@ use Work\Loggers\LoggerXML;
 use Work\Control\Page;
 class Home extends Page {
 
-  public static $pages;
-  public static $pag_atual;
+  private $pages;
+  private $pag_atual;
 
-
-  public static function homePage() {
+  public function __construct(){
     Transaction::open('bdu');
+    Transaction::setLogger(new LoggerXML('novo_home'));
+    $regs = new Multi('Post');
+    $this->pages = $regs->count();
+    $this->pag_atual = 1;
+    echo $this->view();
+  }
+
+  public function view() {
+    Transaction::open('bdu');
+    $lastID = $this->pag_atual * 5;
+    Transaction::log($lastID);
+    $filter = new Criterion;
+    $filter->add(new Filter('id','<=',$lastID));
+    $filter->setProperty('limit',5);
+    $filter->setProperty('offset',(int)$lastID-5);
+
+    $regs = new Multi('Post');
+    $posts = $regs->load($filter);
+
+    $pag_post = file_get_contents('App/Templates/home.html');
+
+    $i = $lastID;
+    $j = $lastID-5;
+    while($i>=$lastID-5) {
+      $post = new Post($posts[$i]->id);
+      $tag = $post->getTag();
+      $date = self::formatDate($post->date);
+      $tittle = utf8_encode($post->tittle);
+      $cover = "'$post->img'";
+      $desc = utf8_encode($post->description);
+
+      $pag_post = str_replace("{{tag"."{$j}"."}}",utf8_encode($tag->tag_name),$pag_post);
+      $pag_post = str_replace("{{dt"."{$j}"."}}",$date,$pag_post);
+      $pag_post = str_replace("{{t"."{$j}"."}}",$tittle,$pag_post);
+      $pag_post = str_replace("{{i"."{$j}"."}}",$cover,$pag_post);
+      $pag_post = str_replace("{{d"."{$j}"."}}",$desc,$pag_post);
+
+      $j++;
+      $i--;
+    }
+    Transaction::log($pag_post);
+    echo $pag_post;
+  }
+
+  /*
+   * homePage(): método utilizado para quando não há requisições
+  */
+  public static function homePage() {
+
+    /*Transaction::open('bdu');
     Transaction::setLogger(new LoggerXML('homepage'));
 
     $exibicao = new Criterion;
 
     $regs = new Multi('Post');
     $lastID = $regs->count();
-    self::$pages = (int) $regs->count()/5;
-    self::$pag_atual = 1;
+    $this->pages = (int) $regs->count()/5;
 
     $exibicao->add(new Filter('id','<=',$lastID));
     $exibicao->setProperty('limit',5);
@@ -50,8 +98,8 @@ class Home extends Page {
       $j++;
       $i--;
     }
-    
-    return $pag_post;
+
+    return $pag_post;*/
   }
   private static function formatDate($date) {
     $foo = explode('-',$date);
@@ -60,8 +108,9 @@ class Home extends Page {
 
   }
 
-  public function flip() {
-
+  public function flip($num_page) {
+    $this->pag_atual = (int)$num_page;
+    echo $this->view();
   }
 
 }
