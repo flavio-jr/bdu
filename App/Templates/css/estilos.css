@@ -1,8 +1,8 @@
 html,body {
   width: 100%;
-  background-image: url('../../Images/background.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #090710;
 }
 #page {
 
@@ -13,41 +13,15 @@ header {
 p {
   margin: 0;
 }
-#login {
-  float: right;
-  margin-right: 60px;
-  margin-top: 15px;
-}
-#login a {
-  text-decoration: none;
-  font-size: 21px;
-  color: white;
-  font-family: GeoSlab;
-  position: relative;
-  right: 4px;
-  bottom: 31px;
-  display: inline-block;
-  width: 65px;
-  height: 23px;
-  transition: 0.5s linear;
-}
-#login a:hover {
-  background-color: rgb(134,244,242);
-  box-shadow: 0px 0px 14px 2px rgb(134,244,246);;
-}
-#login img {
-  width: 60px;
-  height: 51px;
-}
 #banner {
   background-color: black;
   width: 100%;
   height: 64px;
   margin: 0 auto;
 }
-#banner img[src*="banner"] {
+#banner a img[src*="banner"] {
   margin-left: 120px;
-  height: inherit;
+  height: 64px;
 }
 #banner form {
   display: inline-block;
@@ -102,9 +76,9 @@ nav #base-rotativo {
   margin-top: 20px;
   width: 100%;
   margin: 1% auto;
-  height: 240px;
-  background-color: #000000;
-  overflow: hidden;
+  height: 210px;
+  background-color: #d8d8d8;
+  box-shadow: inset 0px 25px 0px #090710;
 }
 #base-rotativo ul {
   width: 800px;
@@ -115,8 +89,10 @@ nav #base-rotativo {
     width: inherit;
 }
 #base-rotativo figure {
-  height: inherit;
+  height: 240px;
   width: 800px;
+  overflow: hidden;
+  box-shadow: 0px 0px 24px 8px black;
 }
 #base-rotativo figure a {
   width: inherit;
@@ -147,6 +123,8 @@ nav #base-rotativo {
   width: 800px;
   height: 40px;
   margin: 0 auto;
+  display: block;
+  margin-top: 40px;
 }
 #selection-bar ul {
   width: 700px;
@@ -188,7 +166,7 @@ nav #base-rotativo {
   margin-right: 8px;
 }
 #menu-hor ul li:hover{
-  border-bottom: 4px solid yellow;
+  border-bottom: 4px solid #FFC107;
 }
 @font-face {
   font-family: GeoSlab;
@@ -242,57 +220,104 @@ nav #base-rotativo {
   margin-bottom: 40px; /*espaçamento entre os posts*/
   overflow: hidden;
 }
+.prev-foot {
+  width: inherit;
+  height: 80px;
+  background-color: white;
+}
 .prev-tag {
   width: inherit;
   height: 40px;
-  background-color: black;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  box-shadow: 9px 9px 22px -10px black;
+  border-bottom: 4px solid #F44336;
 }
 .prev-tag a {
   text-decoration: none;
   font-family: JosefinSansRE;
-  color: white;
+  color: black;
   font-size: 25px;
   float: left;
   margin-left: 10px;
   margin-top: 4px;
 }
 .date {
-  color: white;
-  font-family: Ocran;
+  color: black;
+  font-family: GeoSlab;
   font-size: 22px;
   float: right;
+  margin-top: 7px;
+  margin-right: 4px;
 
 }
 .prev h2 {
   width: 600px;
   display: inline-block;
+
 }
-.prev img {
+.prev-infos {
+  width: inherit;
+  height: 106px;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.75);
   position: relative;
-  bottom: 80px;
+  top: 170px;
+  z-index: 1;
+}
+.prev h2 img {
+  position: relative;
+  bottom: 106px;
   z-index: 0;
   width: inherit;
 }
-.prev h2 a {
+.prev-infos>a{
   font-family: Futura;
   color: white;
   text-decoration: none;
   font-size: 36px;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+.prev-infos {
+  position: relative;
+  z-index: 1;
   display: inline-block;
   width: inherit;
-  height: 80px;
+  height: 106px;
   background-color: rgba(0, 0, 0, 0.75);
   position: relative;
   top: 170px;
   z-index: 1;
 }
+.subject {
+  display: inline-block;
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+}
+.subject a {
+  font-family: Futura;
+  font-size: 16px;
+  padding: 2px 6px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  float: right;
+  margin-left: 4px;
+}
+
 .prev-bloco-texto {
   display: inline-block;
   position: absolute;
+  z-index: 0;
   background-color: white;
-  width: 194px;
-  height: 280px;
-  border-left: 6px solid #673ab7;
+  width: 198px;
+  height: 276px;
+  border-left: 2px solid #673ab7;
   border-bottom: 1px solid gray;
   border-right: 1px solid gray;
   overflow-y: scroll;
@@ -315,23 +340,45 @@ nav #base-rotativo {
   display: inline-block;
   width: 350px;
   float: right;
-  margin-top: 20px;
+  margin-top: 29px;
   margin-right: 24px;
 }
 #profile {
   display: inline-block;
   width: inherit;
-  height: 380px;
   background-color: white;
+}
+#login {
+  width: inherit;
+  height: 50px;
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px black;
+}
+#login img {
+  float: left;
+  height: inherit;
+}
+#login a {
+  text-decoration: none;
+  color: black;
+  font-family: GeoSlab;
+  font-size: 30px;
+  text-align: left;
+  margin-left: 4px;
+  position: relative;
+  top: 6px;
 }
 .label {
   display: inline-block;
   height: 40px;
   width: inherit;
-  background-color: black;
+  background-color: white;
+  box-shadow: 0px 0px 8px black;
 }
 .label p {
-  color: white;
+  color: black;
+  margin-top: 4px;
   font-size: 30px;
   font-family: JosefinSansRE;
   text-align: center;
