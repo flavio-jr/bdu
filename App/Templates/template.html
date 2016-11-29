@@ -16,9 +16,9 @@
 <header>
   <h1> <!-- Banner com o nome do site -->
     <div id="banner">
-      <img src="App/Images/banner.png">
-      <form method="GET" enctype="multipart/form-data">
-        <input type="search" placeholder="o que você procura?">
+      <a href="?class=Home&method=view"><img src="App/Images/banner.png"></a>
+      <form method="POST" enctype="multipart/form-data" name="busca_post" action="?class=Search&method=searchPost" autocomplete="off">
+        <input type="search" placeholder="o que você procura?" name="search">
         <input type="button">
       </form>
     </div>
@@ -85,10 +85,10 @@
     <div id="menu-hor">  <!-- Lista horizontal com defeito no posicionamento -->
       <ul>
         <li><a href="index.php?class=Home&method=view">Home</a></li>
-        <li><a href="#">Análises</a></li>
-        <li><a href="#">Notícias</a></li>
-        <li><a href="#">Contos</a></li>
-        <li><a href="#">Entretenimento</a></li>
+        <li><a href="index.php?class=TagControl&method=view&id=1">Análises</a></li>
+        <li><a href="index.php?class=TagControl&method=view&id=2">Notícias</a></li>
+        <li><a href="index.php?class=TagControl&method=view&id=3">Contos</a></li>
+        <li><a href="index.php?class=TagControl&method=view&id=4">Entretenimento</a></li>
       </ul>
     </div>
   </nav>
@@ -97,16 +97,16 @@
   {{content}}
 
 <div id="paginacao">
-    <div class="pag-base"><a href="?&method=flip&num_page=">1</a></div>
-    <div class="pag-base"><a href="?&method=flip&num_page=">2</a></div>
-    <div class="pag-base"><a href="#">{{pg3}}</a></a></div>
-    <div class="pag-base"><a href="#">{{pg4}}</a></div>
-    <div class="pag-base"><a href="#">{{pg5}}</a></div>
-    <div class="pag-base"><a href="#">{{pg6}}</a></div>
-    <div class="pag-base"><a href="#">{{pg7}}</a></div>
-    <div class="pag-base"><a href="#">{{pg8}}</a></div>
-    <div class="pag-base"><a href="#">{{pg9}}</a></div>
-    <div class="pag-base"><a href="#">{{pg10}}</a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg1}}</a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg2}}</a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg3}}</a></a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg4}}</a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg5}}</a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg6}}</a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg7}}</a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg8}}</a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg9}}</a></div>
+    <div class="pag-base"><a href="?&method=flip&num_page=">{{pg10}}</a></div>
     <!-- <div class="pag-base"><a href="#">...</a></div> -->
   </div>
   <script src="App/Templates/js/pages.js"></script>

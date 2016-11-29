@@ -52,10 +52,10 @@ class Multi {
 			throw new Exception("Não há transação ativa");
 		}
 	}
-	public function count(Criterion $filter = NULL) {
+	public function count(Expression $filter = NULL) {
 		$sql = "SELECT count(*) FROM " . constant("{$this->activeRecord}::TABLENAME");
 		if($filter) {
-			$sql .= "WHERE {$filter->format()}";
+			$sql .= " WHERE {$filter->format()}";
 		}
 
 		if($conn = Transaction::get()) {

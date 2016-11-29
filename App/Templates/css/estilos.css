@@ -2,7 +2,7 @@ html,body {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #090710;
+  background-color: #110e1d;
 }
 #page {
 
@@ -72,13 +72,14 @@ p {
 #banner form input[type="button"]:active {
   border: 6px solid purple;
 }
+nav {margin-top: 40px!important;}
 nav #base-rotativo {
   margin-top: 20px;
   width: 100%;
   margin: 1% auto;
   height: 210px;
   background-color: #d8d8d8;
-  box-shadow: inset 0px 25px 0px #090710;
+  box-shadow: inset 0px 25px 0px #110e1d;
 }
 #base-rotativo ul {
   width: 800px;
@@ -103,7 +104,7 @@ nav #base-rotativo {
   height: 80px;
   width: inherit;
   position: absolute;
-  top: 217px;
+  top: 235px;
 }
 @font-face {
   font-family: Calibri;
@@ -215,7 +216,7 @@ nav #base-rotativo {
 .prev {
   width: 801px;
   height: 320px;
-  background-color: purple;
+  background-color: black;
   margin: 10px 10px;
   margin-bottom: 40px; /*espaçamento entre os posts*/
   overflow: hidden;

@@ -21,6 +21,7 @@ if(!$_GET) {
 	$home->view();
 	$content = ob_get_contents();
 	ob_end_clean();
+	$template = $home->showPages($template);
 	echo str_replace("{{content}}",$content,$template);
 }
 else if($_GET) {
@@ -31,6 +32,7 @@ else if($_GET) {
 		$page->show();
 		$content = ob_get_contents();
 		ob_end_clean();
+		$template = $page->showPages($template);
 		echo str_replace("{{content}}",$content,$template);
 	}
 

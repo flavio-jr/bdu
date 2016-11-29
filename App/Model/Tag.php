@@ -8,9 +8,11 @@ use Work\Database\Transaction;
 class Tag extends Record {
   const TABLENAME = 'tag';
 
-  public function getPosts() {
+  public function getPosts($offset) {
     $c1 = new Criterion;
     $c1->add(new Filter('tag_id','=',$this->id));
+    $c1->setProperty('limit',5);
+    $c1->setProperty('offset',$offset);
     $regs = new Multi('PostTag');
 
     $vinculos = $regs->load($c1);

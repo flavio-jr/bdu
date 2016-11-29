@@ -1,0 +1,568 @@
+html,body {
+  width: 100%;
+  background-image: url('../../Images/background-min.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #09070D;
+}
+#page {
+
+}
+header {
+  width: inherit;
+}
+p {
+  margin: 0;
+}
+#login {
+  float: right;
+  margin-right: 60px;
+  margin-top: 15px;
+}
+#login a {
+  text-decoration: none;
+  font-size: 21px;
+  color: white;
+  font-family: GeoSlab;
+  position: relative;
+  right: 4px;
+  bottom: 31px;
+  display: inline-block;
+  width: 65px;
+  height: 23px;
+  transition: 0.5s linear;
+}
+#login a:hover {
+  background-color: rgb(134,244,242);
+  box-shadow: 0px 0px 14px 2px rgb(134,244,246);;
+}
+#login img {
+  width: 60px;
+  height: 51px;
+}
+#banner {
+  background-color: black;
+  width: 100%;
+  height: 64px;
+  margin: 0 auto;
+}
+#banner img[src*="banner"] {
+  margin-left: 120px;
+  height: inherit;
+}
+#banner form {
+  display: inline-block;
+  height: inherit;
+  width: 250px;
+  float: right;
+  margin-right: 80px;
+}
+#banner form input[type="search"] {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: gray;
+  color: white;
+  margin-top: 16px;
+  border: 0;
+  font-family: JuraRE;
+  font-size: 15px;
+}
+#banner form input::-webkit-input-placeholder {
+  color: white;
+  font-family: JuraRE;
+  font-size: 14px;
+  text-indent: 10px;
+}
+#banner form input[type="search"]:focus {
+  outline-color: transparent;
+  text-indent: 10px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 14px 2px purple;
+}
+#banner form input[type="button"]:focus {
+  outline-color: transparent;
+}
+
+#banner form input[type="button"] {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 5px solid purple;
+  padding: 0;
+  position: relative;
+  top: 6px;
+  left: 10px;
+  border-radius: 40px;
+  transition: 0.01s linear;
+}
+#banner form input[type="button"]:active {
+  border: 6px solid purple;
+}
+nav #base-rotativo {
+  margin-top: 20px;
+  width: 100%;
+  margin: 1% auto;
+  height: 240px;
+  background-color: #000000;
+  overflow: hidden;
+}
+#base-rotativo ul {
+  width: 800px;
+  margin: 0 auto;
+  height: inherit;
+}
+#base-rotativo img {
+    width: inherit;
+}
+#base-rotativo figure {
+  height: inherit;
+  width: 800px;
+}
+#base-rotativo figure a {
+  width: inherit;
+  height: inherit;
+}
+#base-rotativo figure figcaption {
+  background-color: rgba(0,0,0,0.6);
+  height: 80px;
+  width: inherit;
+  position: absolute;
+  top: 217px;
+}
+@font-face {
+  font-family: Calibri;
+  src: url('fonts/Calibri.ttf');
+}
+#base-rotativo figure figcaption a {
+  text-decoration: none;
+  color: white;
+}
+.nome-post {
+  text-indent: 5px;
+  font-size: 40px;
+  text-align: left;
+  font-family: Calibri;
+}
+#selection-bar {
+  width: 800px;
+  height: 40px;
+  margin: 0 auto;
+}
+#selection-bar ul {
+  width: 700px;
+  margin: 0 auto;
+  height: inherit;
+}
+#selection-bar ul li {
+  display: inline-block;
+  width: 136px;
+  position: relative;
+  height: inherit;
+  left: 45px;
+}
+.selection {
+  display: inline-block;
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  border-radius: 100px;
+  background-color: yellow;
+  margin-top: 10px;
+}
+#menu-hor {
+  width: 80%;
+  height: 65px;
+  border-bottom: 4px solid #673AB7;
+  margin: 0 auto;
+  background-color: white;
+}
+#menu-hor ul {
+  width: 1000px;
+  height: inherit;
+  margin: 0 auto;
+}
+#menu-hor ul li {
+  display: inline-block;
+  height: inherit;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+#menu-hor ul li:hover{
+  border-bottom: 4px solid yellow;
+}
+@font-face {
+  font-family: GeoSlab;
+  src: url('fonts/GeoSlab703.ttf');
+}
+#menu-hor ul li a {
+  color: #353333;
+  display: inline-block;
+  font-size: 28px;
+  text-decoration: none;
+  font-family: GeoSlab;
+  padding: 19px 33px;
+}
+
+#content {
+  width: 780px;
+  margin-top: 20px;
+  margin-left: 30px;
+  display: inline-block;
+}
+
+@font-face {
+  font-family: Futura;
+  src: url('fonts/Futura Bk BT Book.ttf');
+}
+@font-face {
+  font-family: JosefinSansRE;
+  src: url('fonts/JosefinSans/JosefinSans-Regular.ttf');
+}
+@font-face {
+  font-family: MerriweatherRE;
+  src: url('fonts/Merriweather/Merriweather-Regular.ttf');
+}
+@font-face {
+  font-family: JuraRE;
+  src: url('fonts/Jura/Jura-Regular.ttf');
+}
+@font-face {
+  font-family: MontserratRE;
+  src: url('fonts/Montserrat/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: Ocran;
+  src: url('fonts/OCRAN.TTF');
+}
+.prev {
+  width: 801px;
+  height: 320px;
+  background-color: purple;
+  margin: 10px 10px;
+  margin-bottom: 40px; /*espaçamento entre os posts*/
+  overflow: hidden;
+}
+.prev-tag {
+  width: inherit;
+  height: 40px;
+  background-color: black;
+}
+.prev-tag a {
+  text-decoration: none;
+  font-family: JosefinSansRE;
+  color: white;
+  font-size: 25px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 4px;
+}
+.date {
+  color: white;
+  font-family: Ocran;
+  font-size: 22px;
+  float: right;
+
+}
+.prev h2 {
+  width: 600px;
+  display: inline-block;
+}
+.prev img {
+  position: relative;
+  bottom: 80px;
+  z-index: 0;
+  width: inherit;
+}
+.prev h2 a {
+  font-family: Futura;
+  color: white;
+  text-decoration: none;
+  font-size: 36px;
+  display: inline-block;
+  width: inherit;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: relative;
+  top: 170px;
+  z-index: 1;
+}
+.prev-bloco-texto {
+  display: inline-block;
+  position: absolute;
+  background-color: white;
+  width: 194px;
+  height: 280px;
+  border-left: 6px solid #673ab7;
+  border-bottom: 1px solid gray;
+  border-right: 1px solid gray;
+  overflow-y: scroll;
+}
+.prev-bloco-texto p {
+  font-family: JuraRE;
+  color: #353333;
+  font-size: 23px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.prev-bloco-texto a {
+  text-decoration: none;
+  font-family: JuraRE;
+  color: #353333;
+  font-size: 23px;
+  float: right;
+}
+#menu-v {
+  display: inline-block;
+  width: 350px;
+  float: right;
+  margin-top: 20px;
+  margin-right: 24px;
+}
+#profile {
+  display: inline-block;
+  width: inherit;
+  height: 380px;
+  background-color: white;
+}
+.label {
+  display: inline-block;
+  height: 40px;
+  width: inherit;
+  background-color: black;
+}
+.label p {
+  color: white;
+  font-size: 30px;
+  font-family: JosefinSansRE;
+  text-align: center;
+}
+.picture {
+  height: 160px;
+  width: 160px;
+  background-color: black;
+  border-radius: 150px;
+  margin: 0 auto;
+  margin-top: 1%;
+  overflow: hidden;
+}
+.picture img {
+  width: inherit;
+  margin: 0 auto;
+}
+#menu-v hr {
+  display: inline-block;
+  width: 113px;
+  height: 2.5px;
+  border: 0;
+  background-color: #673ab7;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.name {
+  display: inline;
+  font-family: Futura;
+  text-align: center;
+  font-size: 20px;
+  color: #353333;
+  position: relative;
+  bottom: 4px;
+}
+#profile>p:not(.name) {
+  font-family: Futura;
+  color: #353333;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.social-media {
+  display: inline-block;
+  width: inherit;
+  margin-left: 5px;
+}
+.social-media a[id*="texto"] {
+  position: relative;
+  bottom: 10px;
+}
+.social-media a {
+  text-decoration: none;
+  font-family: Futura;
+  color: #353333;
+  font-size: 20px;
+}
+.social-media a img {
+  width: 35px;
+  height: 35px;
+}
+#copyright {
+  width: inherit;
+  height: 135px;
+  background-color: black;
+  clear: both;
+}
+#copyright img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+#copyright p {
+  color: white;
+  text-align: center;
+  font-family: Consolas;
+  margin-top: 10px;
+}
+#paginacao {
+  display: block;
+  margin-left: 70px;
+  margin-bottom: 20px;
+  clear: both;
+}
+.pag-base {
+  margin: 20px 5px;
+  border-radius: 40px;
+  background-color: white;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.pag-base a {
+  font-family: GeoSlab;
+  color: #353333;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  position: relative;
+  top: 14px;
+}
+#ads {
+  width: 350px;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-right: 24px;
+}
+#ads hr{
+  width: 84px;
+  height: 2px;
+  border: 0;
+  background-color: white;
+  display: inline-block;
+}
+#ads p {
+  color: white;
+  font-size: 30px;
+  font-family: JosefinSansRE;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+#ads a {
+  width: inherit;
+}
+#ads img {
+  display: inline-block;
+  width: inherit;
+  margin-bottom: 40px;
+}
+#post {
+  width: 800px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px 10px;
+  display: inline-block;
+  padding: 20px;
+}
+#post h1 {
+  font-family: Futura;
+  font-size: 30px;
+  display: inline-block;
+}
+#post>h2 {
+  float: right;
+  margin-right: 10px;
+  font-family: Futura;
+  display: inline-block;
+  font-size: 28px;
+}
+#post hr {
+  border: 0;
+  background-color: #bfbebe;
+  width: 785px;
+  height: 2px;
+  margin: 10px auto;
+}
+#post p {
+  font-family: LoraRE;
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #353333;
+  line-height: 1.6;
+}
+.img-cover {
+  display: block;
+  margin: 4px auto;
+  width: 750px;
+}
+#post p img {
+  width: 200px;
+}
+@font-face {
+  font-family: LoraRE;
+  src: url('fonts/lora/Lora-Regular.ttf');
+}
+#most-recent {
+  float: right;
+  display: inline-block;
+  width: 382px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+#most-recent>h2 {
+  font-size: 25px;
+  display: inline-block;
+  color: white;
+  margin-bottom: 20px;
+  font-family: JosefinSansRE;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#most-recent>hr {
+  border: 0;
+  background-color: white;
+  width: 128px;
+  height: 2px;
+  display: inline-block;
+}
+.recent-post {
+  display: block;
+  height: 150px;
+  width: inherit;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.recent-post img {
+  width: inherit;
+  position: relative;
+  z-index: 0;
+  bottom: 45px;
+}
+.recent-post h2 {
+  font-size: 19px;
+  color: white;
+  font-family: JuraRE;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: inherit;
+  height: 45px;
+  background-color: rgba(0,0,0,0.7);
+  top: 90px;
+}
+.recent-post a {
+  text-decoration: none;
+  width: inherit;
+}
