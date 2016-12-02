@@ -82,6 +82,7 @@ class TagControl extends Page implements View {
     $template = $file;
     if($this->pages<=10) {
       $pg = 1;
+      $this->pages = (($this->pages<1)&&($this->pages!=0)) ? 1 : $this->pages;
       while($pg<=$this->pages) {
         $template = str_replace('{{pg'.$pg.'}}',"{$pg}",$template);
         $pg++;

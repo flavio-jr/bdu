@@ -56,22 +56,6 @@ p {
 #banner form input[type="button"]:focus {
   outline-color: transparent;
 }
-
-#banner form input[type="button"] {
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  border: 5px solid purple;
-  padding: 0;
-  position: relative;
-  top: 6px;
-  left: 10px;
-  border-radius: 40px;
-  transition: 0.01s linear;
-}
-#banner form input[type="button"]:active {
-  border: 6px solid purple;
-}
 nav {margin-top: 40px!important;}
 nav #base-rotativo {
   margin-top: 20px;

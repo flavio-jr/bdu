@@ -17,9 +17,10 @@
   <h1> <!-- Banner com o nome do site -->
     <div id="banner">
       <a href="?class=Home&method=view"><img src="App/Images/banner.png"></a>
-      <form method="POST" enctype="multipart/form-data" name="busca_post" action="?class=Search&method=searchPost" autocomplete="off">
+      <form method="GET" enctype="multipart/form-data" name="busca_post" action="index.php?" autocomplete="off">
+        <input type="hidden" name="class" value="Search">
+        <input type="hidden" name="method" value="searchPost">
         <input type="search" placeholder="o que você procura?" name="search">
-        <input type="button">
       </form>
     </div>
   </h1>

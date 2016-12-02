@@ -18,9 +18,9 @@ class Search extends Page implements View {
     Transaction::open('bdu');
     Transaction::setLogger(new LoggerXML('busca'));
     $regs = new Multi('Post');
-    $condition1 = new Filter('description','like','%'.$_POST['search'].'%');
-    $condition2 = new Filter('subject','like','%'.$_POST['search'].'%');
-    $condition3 = new Filter('tittle','like','%'.$_POST['search'].'%');
+    $condition1 = new Filter('description','like','%'.$param['search'].'%');
+    $condition2 = new Filter('subject','like','%'.$param['search'].'%');
+    $condition3 = new Filter('tittle','like','%'.$param['search'].'%');
     $lastID = $regs->count($condition);
     $filter = new Criterion;
     $filter->add($condition1,$filter::OR_OPERATOR);
@@ -83,7 +83,7 @@ class Search extends Page implements View {
   public function flip($param) {
     self::$pag_atual = $param['num_page'];
     Transaction::log("num".$this->pag_atual);
-    echo $this->view();
+    echo $this->searchPost($param);
   }
 
   public function showPages($file) {

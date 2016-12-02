@@ -1,28 +1,28 @@
 <comandos>
-<log time=18-40-57 date=28-11-2016>
+<log time=13-14-10 date=30-11-2016>
 <message>SELECT count(*) FROM post</message>
 </log>
-<log time=18-40-57 date=28-11-2016>
-<message>SELECT * FROM post WHERE (description like '%Star Wars%' OR subject like '%Star Wars%' OR tittle like '%Star Wars%') LIMIT 5 </message>
+<log time=13-14-10 date=30-11-2016>
+<message>SELECT * FROM post WHERE (description like '%Star%' OR subject like '%Star%' OR tittle like '%Star%') LIMIT 5 </message>
 </log>
-<log time=18-40-57 date=28-11-2016>
+<log time=13-14-10 date=30-11-2016>
 <message>SELECT * FROM tag WHERE id=0</message>
 </log>
-<log time=18-40-57 date=28-11-2016>
+<log time=13-14-10 date=30-11-2016>
 <message>SELECT * FROM tag WHERE id=0</message>
 </log>
-<log time=18-40-57 date=28-11-2016>
+<log time=13-14-10 date=30-11-2016>
 <message>SELECT * FROM tag WHERE id=0</message>
 </log>
-<log time=18-40-57 date=28-11-2016>
+<log time=13-14-10 date=30-11-2016>
 <message>SELECT * FROM tag WHERE id=0</message>
 </log>
-<log time=18-40-57 date=28-11-2016>
+<log time=13-14-10 date=30-11-2016>
 <message>SELECT * FROM tag WHERE id=0</message>
 </log>
-<log time=18-40-57 date=28-11-2016>
+<log time=13-14-10 date=30-11-2016>
 <message>SELECT * FROM post WHERE id=2</message>
 </log>
-<log time=18-40-57 date=28-11-2016>
+<log time=13-14-10 date=30-11-2016>
 <message>SELECT * FROM tag WHERE id=2</message>
 </log>

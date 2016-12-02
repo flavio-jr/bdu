@@ -9,9 +9,12 @@ while(control<=10) {
     if(document.URL) {
       var urlCompleta = document.URL;
       var get = urlCompleta.split("?")[1];
+      console.log(get);
       var object;
+      var param;
       if(get) {
         object = (get.indexOf("&")==-1) ? get : get.split("&")[0];
+        param = (!get.split("&")[2]) ? "" : "&"+get.split("&")[2];
       }
       else {
         object = "class=Home";
@@ -20,7 +23,7 @@ while(control<=10) {
       var href = pages[control-1].href;
       var link = href.split("?")[1] + pg;
 
-      pages[control-1].href = "?" + object + link;
+      pages[control-1].href = "?" + object + param +link;
     }
   }
   control++;

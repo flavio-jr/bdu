@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Testing Tiny MCEditor</title>
+  <meta charset="utf-8">
+  <script src="../../Lib/tinymce/js/tinymce/tinymce.min.js"></script>
+  <script>tinymce.init({
+    selector:'#mytextarea',
+    plugins: "image,code,imagetools,media,link,colorpicker,paste,table,textcolor",
+    menubar: "insert,textcolor",
+    toolbar: "image,code,media,link,paste,table,undo,redo,styleselect,bold,italic,alignleft,aligncenter,alignright,bullist,numlist,outdent,indent,code",
+    image_caption: true
+  });</script>
+</head>
+<body>
+  <form method="POST" enctype="multipart/form-data">
+    <center><textarea id="mytextarea"></textarea></center>
+  </form>
+</body>
+</html>
