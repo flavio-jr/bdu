@@ -32,6 +32,5 @@ else if($_GET) {
 		ob_end_clean();
 	}
 }
-
 echo str_replace("{{content}}",$content,$template);
 ?>

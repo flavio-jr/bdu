@@ -597,3 +597,74 @@ nav #base-rotativo {
   text-decoration: none;
   width: inherit;
 }
+
+#login-system {
+  width: 570px;
+  height: 400px;
+  margin: 2% auto;
+  border-radius: 30px;
+  background-color: white;
+}
+#login-system p {
+  font-family: GeoSlab;
+  font-size: 30px;
+  text-indent: 30px;
+  display: inline-block;
+  position: relative;
+  top: 8px;
+}
+#login-system hr {
+  width: 96%;
+  height: 2px;
+  background-color: #9E9E9E;
+  border: 0;
+  margin-top: 12px;
+}
+
+#login-system form {
+  margin: 6% 205px;
+  display: inline-block;
+}
+#login-system form label {
+  font-family: GeoSlab;
+  font-size: 30px;
+  margin: 6% auto;
+  display: block;
+  text-align: center;
+}
+#login-system form input[type="text"],#login-system form input[type="password"] {
+  border-radius: 5px;
+  height: 33px;
+  width: 180px;
+  border-style: none;
+  box-shadow: 0px 0px 10px -2px inset;
+  background-color: #eae3e3;
+  font-family: Futura;
+  font-size: 16px;
+  text-align: center;
+}
+#login-system form input[type="text"]:focus,#login-system form input[type="password"]:focus {
+  outline: none;
+  border: 1px solid white;
+  box-shadow: 0px 0px 25px 2px #673ab7;
+}
+#login-system form input[type="submit"] {
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-family: GeoSlab;
+  height: 45px;
+  width: 90px;
+  border-radius: 10px;
+  border: 0;
+  margin: 20% auto;
+  display: block;
+}
+#login-system form input[type="submit"]:focus {
+  outline: 0;
+}
+#login-system form input[type="submit"]:hover{cursor: pointer;}
+#login-system form input[type="submit"]:active {
+  height: 42px;
+  width: 86px;
+}
