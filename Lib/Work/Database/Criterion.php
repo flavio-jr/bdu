@@ -5,12 +5,12 @@ class Criterion extends Expression {
 	protected $expressions;
 	protected $operators;
 	protected $proprerties;
-	
+
 	public function __construct() {
 		$this->expressions = array();
 		$this->operators = array();
 	}
-	
+
 	public function add(Expression $exp,$operator = self::AND_OPERATOR) {
 		if(empty($this->expressions)) {
 			$operator = NULL;

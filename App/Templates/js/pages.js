@@ -14,10 +14,12 @@ while(control<=10) {
       var param;
       if(get) {
         object = (get.indexOf("&")==-1) ? get : get.split("&")[0];
-        param = (!get.split("&")[2]) ? "" : "&"+get.split("&")[2];
+        //if there is a third parameter and he is 'id', var param receives a value
+        param = ((get.split("&")[2])&&(get.split("&")[2].split("=")[0]=='id')) ? "&"+get.split("&")[2] : '';
       }
       else {
         object = "class=Home";
+        param = '';
       }
       var pg = pages[control-1].textContent;
       var href = pages[control-1].href;

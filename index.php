@@ -16,13 +16,11 @@ $apl->register();
 
 $template = file_get_contents("App/Templates/template.html");
 if(!$_GET) {
-	$home = new Home;
+	$page = new Home;
 	ob_start();
-	$home->view();
+	$page->view();
 	$content = ob_get_contents();
 	ob_end_clean();
-	$template = $home->showPages($template);
-	echo str_replace("{{content}}",$content,$template);
 }
 else if($_GET) {
 	$class = $_GET['class'];
@@ -32,9 +30,8 @@ else if($_GET) {
 		$page->show();
 		$content = ob_get_contents();
 		ob_end_clean();
-		$template = $page->showPages($template);
-		echo str_replace("{{content}}",$content,$template);
 	}
-
 }
+
+echo str_replace("{{content}}",$content,$template);
 ?>

@@ -1,40 +1,40 @@
 <comandos>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT count(*) FROM post</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM post WHERE (id <= '5') LIMIT 5 </message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM tag WHERE id=0</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM post WHERE id=5</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM tag WHERE id=1</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM post WHERE id=4</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM tag WHERE id=2</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM post WHERE id=3</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM tag WHERE id=1</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM post WHERE id=2</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM tag WHERE id=2</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM post WHERE id=1</message>
 </log>
-<log time=13-18-58 date=30-11-2016>
+<log time=13-05-59 date=02-12-2016>
 <message>SELECT * FROM tag WHERE id=4</message>
 </log>
